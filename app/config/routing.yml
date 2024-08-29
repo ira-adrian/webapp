@@ -1,0 +1,21 @@
+principal:
+    resource: "@PrincipalBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+
+# app/config/routing.yml
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/"
+    type:     annotation
+    prefix:   /admin
+    
+general:
+    resource: "@GeneralBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+usuario:
+    resource: "@UsuarioBundle/Controller/"
+    type:     annotation
+    prefix:   /

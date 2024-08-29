@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+{% set panelColor = ['panel-primary','panel-secondary','panel-success','panel-warning','panel-dange','panel-complementary','panel-gray','panel-muted','panel-fucsia','panel-arandano','panel-uva','panel-cielo','panel-verdin','panel-lima','panel-maiz','panel-tomate','panel-naranja','panel-verde-azulado','panel-mandarina','panel-cereza','panel-lavanda','panel-escarapela','panel-palta','panel-limon','panel-verde-jade','panel-verde-aloe','panel-verde-cemento','panel-info','panel-white'] %}
+{% set panelBorderHeder = ['panel-border-primary','panel-border-secondary','panel-border-success','panel-border-warning','panel-border-danger','panel-border-gray'] %}
+{% set panelBorderFooter = ['panel-border-mandarina','panel-border-cereza','panel-border-lavanda','panel-border-escarapela','panel-border-palta','panel-border-limon','panel-border-verde-jade','panel-border-verde-aloe','panel-border-verde-cemento'] %}
+{% set codigoColor =['arg-azul','arg-secundario','arg-amarillo','arg-verde','arg-rojo','arg-info','arg-arena','arg-negro','arg-gris-intermedio','arg-gris-niebla','arg-uva','arg-arandano','arg-rosado','arg-tomate','arg-naranja','arg-mandarina','arg-maiz','arg-verdin','arg-lima','arg-verde-azulado','arg-palta','arg-lavanda','gna-verde-jade','gna-verde-aloe','gna-verde-cemento','bandera-amarillo','bandera-celeste','bandera-marron'] %}
+{# Excluidos ,'bg-arg-marron-oscuro' ,'bg-arg-rojo' ,'bg-bandera-marron', 'bg-arg-azul'#}
+{% set bgColor = ['bg-arg-secundario','bg-arg-amarillo','bg-arg-verde','bg-arg-info','bg-arg-arena','bg-arg-negro','bg-arg-gris-intermedio','bg-arg-gris-niebla','bg-arg-uva','bg-arg-arandano','bg-arg-rosado','bg-arg-tomate','bg-arg-naranja','bg-arg-mandarina','bg-arg-maiz','bg-arg-verdin','bg-arg-lima','bg-arg-verde-azulado','bg-arg-palta','bg-arg-lavanda','bg-gna-verde-jade','bg-gna-verde-aloe','bg-gna-verde-cemento','bg-bandera-amarillo','bg-bandera-celeste'] %}
+{% set texColor = ['text-arg-azul','text-arg-secundario','text-arg-amarillo','text-arg-verde','text-arg-rojo','text-arg-info','text-arg-arena','text-arg-negro','text-arg-gris-intermedio','text-arg-gris-niebla','text-arg-uva','text-arg-arandano','text-arg-rosado','text-arg-tomate','text-arg-marron-oscuro','text-arg-naranja','text-arg-mandarina','text-arg-maiz','text-arg-verdin','text-arg-lima','text-arg-verde-azulado','text-arg-palta','text-arg-lavanda','text-gna-verde-jade','text-gna-verde-aloe','text-gna-verde-cemento','text-bandera-amarillo','text-bandera-celeste','text-bandera-marron'] %}
+<!--[if IEMobile 7 ]> <html lang="es"class="iem7"> <![endif]-->
+<!--[if lt IE 7 ]> <html lang="es" class="ie6 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="es" class="ie7 lt-ie8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="es" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
+<html lang="es"><!--<![endif]-->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Banco de Pruebas</title>
+<meta name="description" content="Base de html y css para la creación de sitios pertenecientes a la Administración Pública Nacional de la República Argentina.">
+<meta name="author" content="Presidencia de la Nación">
+<link rel="shortcut icon" href="{{ asset('favicon4.ico')  }}">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Nav and address bar color -->
+<meta name="theme-color" content="#0072b8">
+<meta name="msapplication-navbutton-color" content="#0072b8">
+<meta name="apple-mobile-web-app-status-bar-style" content="#0072b8">
+<meta property="og:url" content="http://localhost:4000/proyectos/argentina/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Banco de Pruebas">
+<meta property="og:description" content="Base de html y css para la creación de sitios pertenecientes a la Administración Pública Nacional de la República Argentina.">
+<meta property="og:image" content="/ejemplos/img/jumbotron.jpg">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Banco de Pruebas">
+<meta name="twitter:description" content="Base de html y css para la creación de sitios pertenecientes a la Administración Pública Nacional de la República Argentina.">
+<meta name="twitter:image" content="/ejemplos/img/jumbotron.jpg">
+
+
+<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" media="all" />
+
+<!-- CSS - Bootstrap (v-3.4.1), Font Awesome (v-4.7.0), Poncho, Iconos -->
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"  rel="stylesheet">
+{# <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">#}
+{#<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">#}
+<link href="{{ asset('bundles/principal/plugins/font-awesome/css/font-awesome.min.css') }}" type="text/css" rel="stylesheet">
+<link href="{{ asset('bundles/principal/plugins/poncho/dist/css/poncho.min.css') }}" type="text/css" rel="stylesheet">
+<link href="{{ asset('bundles/principal/plugins/poncho/dist/css/icono-arg.css') }}" type="text/css" rel="stylesheet">
+
+<!-- JavaScript - Jquery, Bootstrap (v-3.4.1) -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!-- owlcarousel -->
+<link rel="stylesheet" href="{{ asset('bundles/principal/plugins/owlcarousel/dist/assets/owl.carousel.min.css') }}">
+<link rel="stylesheet" href="{{ asset('bundles/principal/plugins/owlcarousel/dist/assets/owl.theme.default.min.css') }}">
+
+<script src="{{ asset('bundles/principal/plugins/owlcarousel/dist/owl.carousel.min.js') }}"></script>
+
+{#
+<script src="{{ asset('bundles/principal/plugins/jquery/jquery.min.js')  }}"></script> 
+<script src="{{ asset('bundles/principal/plugins/bootstrap/js/bootstrap.min.js')  }}"></script> 
+
+<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" media="all" />
+ <!-- PONCHO -->
+<link href="{{ asset('bundles/principal/plugins/poncho/dist/css/roboto-fontface.css')  }}" type="text/css" rel="stylesheet">
+<link href="{{ asset('bundles/principal/plugins/poncho/dist/css/poncho.min.css') }}" type="text/css" rel="stylesheet">
+<link href="{{ asset('bundles/principal/plugins/poncho/dist/css/documentacion.css') }}" type="text/css" rel="stylesheet">
+<link href="{{ asset('bundles/principal/plugins/poncho/dist/css/icono-arg.css') }}" type="text/css" rel="stylesheet">
+ <!-- FIN PONCHO -->
+<link href="{{ asset('bundles/principal/plugins/font_awesome/font-awesome.min.css') }}" rel="stylesheet">
+#}
+
+
+<style> 
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100%;    /* Set slide height here */
+  height:400px;    /* Set slide height here */
+}
+
+/* Carousel dark indicators */
+/* Add an extra .carousel parent class to increase specifity
+   avoiding the use of !important flag. */
+
+
+.carousel .carousel-indicators li {
+  background-color: #fff;
+  background-color: rgba(70,70,70,.25);
+}
+
+.carousel .carousel-indicators .active {
+  background-color: #444;
+}
+
+/* Boton WhatsApp  */
+@media only screen and (max-width: 767px) {
+       .btn-whatsapp {
+      position:fixed;
+      width:94px;
+      height:94px;
+      bottom:75px;
+      right:10px;
+      text-align:center;
+      z-index:100;
+    }
+  }
+
+@media only screen and (max-width: 480px) {
+    .btn-whatsapp {
+      position:fixed;
+      width:90px;
+      height:90px;
+      bottom:75px;
+      right:10px;
+      text-align:center;
+      z-index:100;
+    }
+  }
+
+.btn-whatsapp {
+  position:fixed;
+  width:90px;
+  height:90px;
+  bottom:25px;
+  right:10px;
+  text-align:center;
+  z-index:100;
+}
+
+
+.btn-whatsapp:hover {
+  transform: scale(1.2);
+}
+</style>  
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --> 
+<!--[if lt IE 9]>
+      <script src="http://argob.github.io/poncho/js/html5shiv.js"></script>
+      <script src="http://argob.github.io/poncho/js/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body role="document" class="html front not-logged-in no-sidebars page-node i18n-es jquery-once-1-processed">
+<h1 class="sr-only"><small>Municipalidad de Fray Mamerto Esquiu</small></h1>
+<div id="skip-link"> <a href="https://www.argentina.gob.ar/#main-content" class="element-invisible element-focusable">Pasar al contenido principal</a></div>
+<div class="region region-page-top">
+  <section id="campaign" role="dialog" aria-labelledby="campaign01" aria-describedby="campaign02" style="padding:0px">
+    <div class="container-fluid text-primary">
+      <div class="container">
+        <ul class="list-inline text-right">
+            <li >
+                <a href="https://www.facebook.com/FrayMamertoEsquiuMunicipalidad" target="_blank" rel="noopener noreferrer">
+                    <i class="icono-arg-facebook-circular fw fa-lg" alt="Facebook" style="margin-right: 5px; cursor: pointer" title="FME en Facebook" aria-hidden="true"></i><span class="sr-only">FME en Facebook</span>
+                </a>
+            </li>
+            <li >
+                <a href="https://instagram.com/fray_municipalidad?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener noreferrer">
+                    <i class="icono-arg-instagram-circular fw fa-lg" alt="Instagram" style="margin-right: 5px; cursor: pointer" title="FME en Instagram" aria-hidden="true"></i><span class="sr-only">FME en Instagram</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/fray_muni?s=21&amp;t=5Sl2zF3qa3OX_r7dVfUzKw" target="_blank" rel="noopener noreferrer">
+                    <i class="icono-arg-twiter-circular fw fa-lg" alt="Twitter" style="margin-right: 5px; cursor: pointer" title="FME en Twitter" aria-hidden="true"></i><span class="sr-only">FME en Twitter</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://api.whatsapp.com/send?phone=5493834804322" target="_blank" rel="noopener noreferrer">
+                    <i class="icono-arg-whatsapp-telefono fw fa-lg" alt="Whatsapp" style="margin-right: 5px; cursor: pointer" title="FME en WhatsApp" aria-hidden="true"></i><span class="sr-only">FME en WhatsApp</span>
+                </a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+<header>
+  <nav class="navbar navbar-top navbar-default bg-celeste-argentina" role="navigation">
+    <div class="container">
+      <div>
+        <div class="navbar-header"> <a class="navbar-brand" href="https://www.fraymunicipalidad.gob.ar" aria-label="Municipalidad de Fray Mamerto Esquiu"> <img alt="Municipalidad de Fray Mamerto Esquiu" src="{{ asset('uploads/imagenes/logo-t.png')  }}" height="50"> </a> <a class="btn btn-mi-argentina btn-login visible-xs" href="https://argob.github.io/proyectos/mi-argentina/v3/"><i class="icono-arg-mi-argentina fa-fw"></i></a> <a class="btn bg-white btn-login visible-xs" href="#" onclick="$('.navbar.navbar-top').addClass('state-search');"><span class="fa fa-search fa-fw"></span></a> </div>
+        <div class="nav navbar-nav navbar-right hidden-xs"> <a href="#" onclick="$('.navbar.navbar-top').removeClass('state-search');" class="btn btn-mi-argentina visible-xs"> <i class="fa fa-times"></i> </a>
+          <div style="float: left">
+            <div class="input-group">
+              <input id="buscar" type="text" class="form-control input-search" aria-label="Buscar trámites, servicios o áreas" placeholder="Buscar trámites, servicios o áreas ...">
+              <span class="input-group-btn">
+              <button class="btn bg-white" type="button" aria-label="Buscar"><i class="fa fa-search text-primary"></i></button>
+              </span> </div>
+          </div> <a  href="{{ path ('usuario_login')}}" class="btn btn-mi-argentina hidden-xs bg-white" aria-label="Ingresar">Ingresar</a> </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<main role="main"> <a id="main-content"></a>
+<!--  PARA LOS MARGENES SUPERIOR E INFERIOR  m-y-3 m-t-1 -->
+ <div class="region region-content m-t-1">
+    <div id="block-system-main" class="block block-system clearfix">
+
+        <div class="panel-separator"></div>
+        <div class="pane-content">
+         <!-- 
+          <section class="container-campania jumbotron" style="background-image:url(https://www.argentina.gob.ar/sites/default/files/styles/listado/public/imagenAtajo/nuevo-coronavirus-covid-19_0.jpg?itok=M3dKRVF0); ">
+          </section> -->
+            <div class="container">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" >
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" style=" width:100%;
+                  max-height: 500px !important;"  role="listbox">
+                      <div class="item active">
+                        <img src="{{ asset('uploads/imagenes/slider1.jpg')}}" >
+                        <div class="carousel-caption">
+                          <h1>Plaza Principal</h1>
+                          <h3>Ubicada en la localidad de Piedra Blanca a 11 km de la capital provincial</h3>
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <img src="{{ asset('uploads/imagenes/slider2.jpg')}}" >
+                        <div class="carousel-caption">
+                                                <h1>Capilla de San José</h1>
+                                                <h3>Capilla de la epoca colonial que es mantenida intacta</h3>
+                        </div>
+                      </div>
+
+                        <div class="item">
+                        <img src="{{ asset('uploads/imagenes/slider3.jpg')}}" >
+                        <div class="carousel-caption">
+                                                <h1>Dique de Las Pirquitas</h1>
+                                                <h3>Embalse construido en 1970 que abastece de agua a todo el Valle Central</h3>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                  </div>
+            </div>
+            </div>
+        </div>
+        <!-- NOTICIAS -->
+          <section id="noticias" class="clearfix">
+            <div class="container-fluid">
+            <h2>Ultimas Noticias</h2>
+              <div class="panel-pane pane-atajos">
+                <div class="pane-content">
+                  <div class="row panels-row">
+
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3"> <a href="#" class="panel panel-default {{random(panelBorderFooter)}}">
+                      <div style="background-image:url(https://www.argentina.gob.ar/sites/default/files/styles/listado/public/imagenAtajo/atp_atajo_480x320_0.png?itok=gRqGt2p_);" class="panel-heading"></div>
+                      <div class="panel-body">
+                        <h3>Programa de Asistencia</h3>
+                        <div class="text-muted">
+                          <p>Programa de Asistencia al Trabajo y la Producción.Praesent dui enim, volutpat a est et, eleifend cursus elit. Ut erat urna, egestas varius dapibus non, volutpat eget sapien. Pellentesque quis nunc justo. Vestibulum eu libero sed quam volutpat dictum quis eget mi. Donec nulla nisl, tempor gravida blandit vel, laoreet quis erat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean laoreet lectus sed mauris pellentesque, at vehicula massa auctor. Sed ut arcu pretium, semper massa ac, malesuada ante. </p>
+                        </div>
+                      </div>
+                      </a> 
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3"> <a href="" class="panel panel-default {{random(panelBorderFooter)}}">
+                      <div style="background-image:url(https://fraymunicipalidad.gob.ar/storage/files/101/WhatsApp%20Image%202023-07-07%20at%2008.12.37.jpeg);" class="panel-heading"></div>
+                      <div class="panel-body">
+                        <h3>Programa de desarrollo</h3>
+                        <div class="text-muted">
+                          <p>Programa de desarrollo urbano y habitacional. Morbi vulputate ultricies tempor. Aliquam aliquam mauris tempor viverra pharetra. Morbi in odio ac nunc laoreet ullamcorper at sed ipsum. Sed et velit non nunc venenatis consequat. Sed lacinia euismod ex, eu vehicula est sollicitudin feugiat. Fusce lobortis, est sit amet posuere rhoncus, lacus turpis pulvinar elit, vel mollis lectus tellus non tellus. Nam at elit sapien. Sed mattis ipsum quis orci congue lobortis. Nullam fringilla accumsan magna, sit amet varius eros vestibulum eget. Donec sed tortor augue. Vivamus in arcu eu tellus aliquet porta et at leo. Vestibulum tincidunt consectetur augue ut scelerisque. Mauris fermentum ante dui, et tempus orci consequat vel.</p>
+                        </div>
+                      </div>
+                      </a> </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3"> <a href="#" class="panel panel-default {{random(panelBorderFooter)}}">
+                      <div style="background-image:url(https://fraymunicipalidad.gob.ar/storage/files/101/WhatsApp%20Image%202023-09-26%20at%2017.54.48.jpeg);" class="panel-heading"></div>
+                      <div class="panel-body">
+                        <h3>Ayuda Social</h3>
+                        <div class="text-muted">
+                          <p>Enterate de los mecanismos que ponemos en marcha para garantizar el derecho a la alimentación.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl nulla, tincidunt nec commodo ut, facilisis fringilla enim. Phasellus lacinia, mauris molestie fermentum fringilla, tellus velit convallis leo, non dapibus tellus sem et arcu. Cras elementum est a mi laoreet viverra. In hac habitasse platea dictumst. Vestibulum mi leo, pulvinar vel lorem vitae, dictum pretium enim. Cras vitae est quis ex porttitor mattis. Mauris convallis ligula quis feugiat aliquet. In lacinia dictum ipsum in fermentum. Proin ex lorem, volutpat vel ante id, congue rhoncus mi. Donec in sem blandit, vulputate lorem ut, feugiat urna. </p>
+                        </div>
+                      </div>
+                      </a> 
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3"> <a href="#" class="panel panel-default {{random(panelBorderFooter)}}">
+                      <div style="background-image:url(https://fraymunicipalidad.gob.ar/storage/files/101/WhatsApp%20Image%202023-05-18%20at%2017.34.03.jpeg);" class="panel-heading"></div>
+                      <div class="panel-body">
+                        <h3>Programa Lorem Ipsum</h3>
+                        <div class="text-muted">
+                          <p>Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo..</p>
+                        </div>
+                      </div>
+                      </a> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        
+        <!-- TRAMITES -->
+          <section id="tramites" class="clearfix">
+        <div class="container">
+            <div class="panel-pane pane-texto">
+              <div class="pane-content">
+                    <div class="row">
+                      <div class="col-md-8 col-md-offset-2">
+                        <div id="campaign-alert" class="alert alert-info">
+                          <div class="media">
+                            <div class="media-left">
+                              <div class="media-left"> <i aria-hidden="true" class="fa fa-info fa-fw fa-4x text-primary" title="Información Importante"></i> <span class="sr-only">Información Importante</span></div>
+                            </div>
+                            <div class="media-body">
+                              <p class="margin-0">&nbsp;</p>
+                              <p><a href="#">Ahora podes registrate para gestionar servicios y tramites</a></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+            </div>
+      </div>
+            <div class="panel-separator"></div>
+            <div class="panel-pane pane-texto">
+              <div class="pane-content">
+                <div class="">
+                  <div class="">
+                    <h2>Trámites y servicios</h2>
+                    <div class="row panels-row m-t-2">
+                         {% for tramite in tramites %}
+                          {% set tex_color = random(texColor)  %}
+                          <div class="col-xs-12 col-sm-6 col-md-4"> <a class="panel panel-default" href="#">
+                            <div class="panel-body">
+                              <div class="media">
+                                <div class="media-left padding-20"><i class="{{tramite.icono}} fw fa-3x {{tex_color}}"></i></div>
+                                <div class="media-body">
+                                  <h3>{{tramite.titulo}}</h3>
+                                </div>
+                              </div>
+                            </div>
+                            </a> 
+                          </div>
+                       {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </section>
+        <!-- AUTORIDADES -->
+          <section id="autoridades" class="clearfix">
+            <div class="panel-pane pane-texto">
+              <div class="pane-content">
+                <div class="">
+                  <div class="">
+                    <h2>Autoridades</h2>
+                    <div class="row panels-row m-t-2">
+                         {% for autoridad in autoridades if autoridad.id < 9%}
+                          {% set tex_color = random(texColor)  %}
+                          <div class="col-xs-12 col-sm-6 col-md-4"> 
+                          <div class="panel panel-default" href="#">
+                            <div class="panel-body">
+                              <div class="media">
+                                <div class="media-left padding-20"><i class="icono-arg-credenciales fw fa-3x {{tex_color}}"></i></div>
+                                <div class="media-body">
+                                  <h3>{{autoridad.cargo}}</h3>
+                                  <h4 class="media-heading">{{autoridad.nombreCompleto}}</h4>
+                                            <address>
+                                                      <i class="icono-arg-telefono-lineal fw" aria-hidden="true"></i> <span>{{autoridad.telefono}}</span>
+                                            <br>
+                                                     <i class="icono-arg-mail-03 fw" aria-hidden="true"></i> <span>{{autoridad.email}}</span>
+                                              </address>
+                                        
+                                </div>
+                                </div>
+                                <div class="panel-footer padding-0">
+                                          <ul class="list-inline text-right">
+                                              <li >
+                                                  <a href="{{autoridad.facebook}}" target="_blank" rel="noopener noreferrer">
+                                                      <i class="icono-arg-facebook-circular fw " alt="Facebook" style="margin-right: 5px; cursor: pointer" title="FME en Facebook" aria-hidden="true"></i><span class="sr-only">FFacebook</span>
+                                                  </a>
+                                              </li>
+                                              <li >
+                                                  <a href="{{autoridad.instagram}}" target="_blank" rel="noopener noreferrer">
+                                                      <i class="icono-arg-instagram-circular fw " alt="Instagram" style="margin-right: 5px; cursor: pointer" title="FME en Instagram" aria-hidden="true"></i><span class="sr-only"> Instagram</span>
+                                                  </a>
+                                              </li>
+                                              <li>
+                                                  <a href="{{autoridad.twitter}}" target="_blank" rel="noopener noreferrer">
+                                                      <i class="icono-arg-twiter-circular fw " alt="Twitter" style="margin-right: 5px; cursor: pointer" title="FME en Twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span>
+                                                  </a>
+                                              </li>
+                                              <li>
+                                                  <a href="https://api.whatsapp.com/send?phone={{autoridad.telefono}}" target="_blank" rel="noopener noreferrer">
+                                                      <i class="icono-arg-whatsapp-telefono fw" alt="Whatsapp" style="margin-right: 5px; cursor: pointer" title="FME en WhatsApp" aria-hidden="true"></i><span class="sr-only"> WhatsApp</span>
+                                                  </a>
+                                              </li>
+                                          </ul>
+
+                                </div>
+                            </div>
+                          </div>
+                          </div>
+                       {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </section>
+    </div>
+  </div>
+</main>
+{% set bg_color = random(bgColor)  %}
+<footer class="main-footer {{bg_color}} ">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+        <div class="region region-footer1">
+          <section id="block-menu-menu-footer-1" class="block block-menu clearfix">
+            <h2 class="block-title h3 section-title h3 section-title">Municipalidad de FME</h2>
+            <ul class="menu nav">
+              <li class="first leaf">Turnos</li>
+              <li class="leaf">San José de Piedra Blanca</li> 
+              <li class="last leaf">Fray Mamerto Esquiú, Catamarca</li> 
+            </ul>
+          </section>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+        <div class="region region-footer2">
+          <section id="block-menu-menu-footer-2" class="block block-menu clearfix">
+            <h2 class="block-title h3 section-title h3 section-title">Info de contacto</h2>
+            <ul class="menu nav">
+              <li class="first leaf"><a href="#">contacto@fraymunicipalidad.gob.ar</a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+        <div class="region region-footer3">
+          <section id="block-menu-menu-footer-3" class="block block-menu clearfix">
+            <h2 class="block-title h3 section-title h3 section-title">Teléfonos Útiles</h2>
+            <address>
+                <p><span></span> Policía: 101 / 911</p>
+                <p><span class="material-icons"></span> Comisaría de Piedra Blanca: 4492871</p>
+                <p><span class="material-icons"></span> Comisaría de San Antonio: 4492111</p>
+                <p><span class="material-icons"></span> Guardia Urbana: 3834736965 / 3834384400</p>
+                <p><span class="material-icons"></span> Bomberos: 100</p>
+                <p><span class=""></span> Bomberos voluntarios FME: 3834360557</p>
+                <p><span class="material-icons"></span> Hospital de San José: 4492530</p>
+            </address>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row sub-footer">
+      <div class="container">
+        <div class="col-sm-6 m-y-1 p-x-0"> <img class="image-responsive" src="{{ asset('uploads/imagenes/primerolagente.svg')  }}" alt="Primero la gente" height="80"></div>
+      </div>
+    </div>
+  </div>
+</footer>
+    <div class="">
+        <a href="https://api.whatsapp.com/send?phone=5493834804322" target="_blank" class="btn-whatsapp">
+            <img src="{{ asset('uploads/imagenes/chatbot_quiu.png')  }}" alt="" width="100%">
+        </a>
+    </div>
+</body>
+
+<script> 
+
+$('.carousel').carousel({
+  interval: 2000
+})
+
+</script>
+</html>

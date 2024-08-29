@@ -1,0 +1,23 @@
+{% extends 'frontend.html.twig' %}
+{% block title %} {{usuario}}{% endblock %}
+
+{% block body %}
+     {{ parent() }}
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading text-center">  
+             <h3> PRUEBA </h3>
+        </div>
+        <div class="panel-body">
+
+        {{ form_start(form) }}
+            {{ form_widget(form) }}
+
+            <div class="text-right">
+                <input class="btn btn-danger btn-sm" type="submit" value="Guardar" />
+            </div>
+        {{ form_end(form) }}
+            </div>
+    </div>
+</div>
+{% endblock %}
